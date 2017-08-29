@@ -12,7 +12,27 @@
 		150F58B11F55CFCA0052FFD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 150F58AF1F55CFCA0052FFD1 /* Main.storyboard */; };
 		150F58B31F55CFCA0052FFD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 150F58B21F55CFCA0052FFD1 /* Assets.xcassets */; };
 		150F58B61F55CFCA0052FFD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 150F58B41F55CFCA0052FFD1 /* LaunchScreen.storyboard */; };
+		150F58BF1F55D0230052FFD1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150F58BD1F55D0230052FFD1 /* Realm.framework */; };
+		150F58C01F55D0230052FFD1 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150F58BD1F55D0230052FFD1 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		150F58C11F55D0230052FFD1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150F58BE1F55D0230052FFD1 /* RealmSwift.framework */; };
+		150F58C21F55D0230052FFD1 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150F58BE1F55D0230052FFD1 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		150F58C61F55D0570052FFD1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150F58C51F55D0570052FFD1 /* Model.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		150F58C31F55D0230052FFD1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				150F58C21F55D0230052FFD1 /* RealmSwift.framework in Embed Frameworks */,
+				150F58C01F55D0230052FFD1 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		150F58A81F55CFCA0052FFD1 /* myRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +42,9 @@
 		150F58B21F55CFCA0052FFD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		150F58B51F55CFCA0052FFD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		150F58B71F55CFCA0052FFD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		150F58BD1F55D0230052FFD1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		150F58BE1F55D0230052FFD1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		150F58C51F55D0570052FFD1 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150F58C11F55D0230052FFD1 /* RealmSwift.framework in Frameworks */,
+				150F58BF1F55D0230052FFD1 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +63,8 @@
 		150F589F1F55CFCA0052FFD1 = {
 			isa = PBXGroup;
 			children = (
+				150F58BD1F55D0230052FFD1 /* Realm.framework */,
+				150F58BE1F55D0230052FFD1 /* RealmSwift.framework */,
 				150F58AA1F55CFCA0052FFD1 /* myRealm */,
 				150F58A91F55CFCA0052FFD1 /* Products */,
 			);
@@ -56,6 +83,7 @@
 			children = (
 				150F58AB1F55CFCA0052FFD1 /* AppDelegate.swift */,
 				150F58AD1F55CFCA0052FFD1 /* ViewController.swift */,
+				150F58C51F55D0570052FFD1 /* Model.swift */,
 				150F58AF1F55CFCA0052FFD1 /* Main.storyboard */,
 				150F58B21F55CFCA0052FFD1 /* Assets.xcassets */,
 				150F58B41F55CFCA0052FFD1 /* LaunchScreen.storyboard */,
@@ -74,6 +102,8 @@
 				150F58A41F55CFCA0052FFD1 /* Sources */,
 				150F58A51F55CFCA0052FFD1 /* Frameworks */,
 				150F58A61F55CFCA0052FFD1 /* Resources */,
+				150F58C31F55D0230052FFD1 /* Embed Frameworks */,
+				150F58C41F55D02C0052FFD1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -131,11 +161,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		150F58C41F55D02C0052FFD1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		150F58A41F55CFCA0052FFD1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150F58C61F55D0570052FFD1 /* Model.swift in Sources */,
 				150F58AE1F55CFCA0052FFD1 /* ViewController.swift in Sources */,
 				150F58AC1F55CFCA0052FFD1 /* AppDelegate.swift in Sources */,
 			);
@@ -260,6 +307,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = myRealm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = school.myRealm;
@@ -272,6 +323,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = myRealm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = school.myRealm;
